@@ -1,0 +1,30 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de:</title>
+</head>
+<body>
+
+
+    <p>Este es un proyecto de Juan Pablo Chiconi, para el curso de Python de CoderHouse. El proyecto es una pagina web que utiliza Django
+        y otros complementos para lograr una base de datos de clientes que tienen que visualizar el estado de distintos sensores. Aqui solo 
+        podemos cargar los clientes con sus datos personales y los sensores.
+    </p>
+    <p>
+        <a href="{% url 'Inicio' %}">Inicio (Buscar)</a>
+    </p>
+
+    
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<style>
+    h1 {
+        font-size: 34px;
+        line-height: 50px;
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+</style>
+<style>
+    h3 {
+        font-size: 24px;
+        line-height: 50px;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+</style>
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>INICIO  </h1>
+  
+
+    <h3>Podes buscar un Sensor:  </h3>
+
+    <form action="/AppCoder/buscar/" method="GET">
+
+        <input type="text" name="modelo" id="modelo">
+
+        <input type="submit" value="Buscar">
+
+
+
+
+    </form>
+
+    
+
+    {% if sensoresmodelo %}
+
+    <p>Estamos buscando el: {{modelo}}</p>
+
+    <ul>
+	{% for sensor in  sensoresmodelo %}
+        <li>{{sensor.modelo}}</li>
+        <li>{{sensor.valor}}</li>
+		
+	{% endfor %}
+
+    </ul>
+
+    {% endif %}
+
+{% endblock %}
